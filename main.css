@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "YekanBakh";
+    font-weight: 300;
+    src: url(/Font/TTF/YekanBakh-Regular.ttf);
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-weight: 600;
+    src: url(Font/TTF/YekanBakh-Bold.ttf);
+  }
+  @font-face {
+    font-family: "YekanBakh";
+    font-weight: 900;
+    src: url(Font/TTF/YekanBakh-ExtraBlack.ttf);
+  }
+  * {
+    margin: 0;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--black-color);
+}
+  body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    font-family: "YekanBakh";
+    font-weight: 300;
+    direction: rtl;
+    overflow-x: hidden;
+    position: relative
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+.ticket-train{
+  display: grid;
+  grid-template-columns: repeat(4,minmax(180px,300px));
+  gap: 25px;
+}
+.ticket-train img{
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  height: 180px;
+}
+.ticket-card{
+    border: 1px solid #eee;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: linear-gradient(163deg,#fcfcfe 0,#e2e6f2 100%);
+}
+.scale svg{
+    transition: all .5s;
+}
+.scale .ticket-card:hover svg{
+  transform: translateX(10px)scale(1.2);
+}
+.ticket-card a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.company-name{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.shadow .ticket-card{
+    background: none;
+    transition: all .5s;
+}
+.shadow .ticket-card:hover{
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
